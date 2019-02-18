@@ -1,5 +1,6 @@
-.filterable {
-    margin-top: 15px;
+*{
+    margin-left: 0 !important;
+    padding: 0 !important;
 }
 .filterable .panel-heading .pull-right {
     margin-top: 0px;
