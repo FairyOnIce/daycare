@@ -21,3 +21,11 @@
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
+
+table td
+{
+  table-layout:fixed;
+  width:120px;
+  overflow:hidden;
+  word-wrap:break-word;
+}
