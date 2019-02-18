@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import sqlite3 as sql
 from prepare_data import TABLENAME
+
 app = Flask(__name__)
 
 

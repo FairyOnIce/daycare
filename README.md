@@ -1,5 +1,9 @@
 ## To run, heroku app
 
+## Step 0:
+ - modify data/Daycare.xls if necessary
+ - modify My Map in google map accordingly
+
 ## Step 1: convert excel file into database.db
 python prepare_data.py
 

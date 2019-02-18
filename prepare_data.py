@@ -1,6 +1,3 @@
-import sqlite3 as sql
-import pandas as pd
-
 FILEXLS = "data/Daycare.xls"
 
 TABLENAME = "DAYCARE"
@@ -21,6 +18,8 @@ def extrac_column_names(df):
     return(columns_schema, columns, questions)
 
 if __name__ == "__main__":
+    import sqlite3 as sql
+    import pandas as pd
 
     print("updating database.db...")
     df = pd.read_excel(FILEXLS)
