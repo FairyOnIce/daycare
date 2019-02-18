@@ -22,7 +22,7 @@ def extrac_column_names(df):
 
 if __name__ == "__main__":
 
-
+    print("updating database.db...")
     df = pd.read_excel(FILEXLS)
     df = df.fillna("") ## NA is not allowed in database
 
@@ -38,3 +38,4 @@ if __name__ == "__main__":
             cur.execute("INSERT INTO {} {} VALUES{}".format(
                         TABLENAME,columns,questions), tuple(str(a) for a in row.values))
         con.commit()
+    print("success!")
