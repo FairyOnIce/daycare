@@ -3,23 +3,20 @@
 
 <div class="container">
     <div class="row">
-            <div class="col">
-                <h1>Hello {{name}}!</h1>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1qDU4nc09mTkhAy3sUl5h4MbJNETHieP6" frameborder="0"  height="500" width="100%"></iframe>
-            </div>
+        <div class="col">
+            <h1>Hello {{name}}!</h1>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1qDU4nc09mTkhAy3sUl5h4MbJNETHieP6"
+                    height="700" width="100%"></iframe>
+        </div>
     </div>
     <div class="row">
-
-<div class="container">
-    <div class="row">
         <div class="panel panel-primary filterable">
-            <div class="panel-heading" bgcolor="#FF0000">
 
-                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
-                    Filter
-                </button>
 
-            </div>
+                <div class="panel-heading">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+
             <table class="table">
                 <thead>
                 <tr>
@@ -27,9 +24,9 @@
                     <th>{{column}}</th>
                     {% endfor %}
                 </tr>
-                <tr class="filters">
+                <tr class="filters" >
                     {% for column in column_names %}
-                        <td height="2px"><input type="text" class="form-control" placeholder="_" disabled></td>
+                        <th><input type="text" class="form-control" placeholder="" disabled></th>
                     {% endfor %}
                 </tr>
                 </thead>
@@ -45,12 +42,7 @@
             </table>
         </div>
     </div>
-</div>
-
-
-
-    </div>
-        <a href="https://fairyonice.github.io/"> Home </a>
+    <a href="https://fairyonice.github.io/"> Home </a>
 </div>
 
 {% endblock %}

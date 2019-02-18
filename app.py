@@ -7,17 +7,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("main.html", name="working mom")
+    return daycare_table("Mom")
 
 
-@app.route("/daycare_table")
-def main(name):
-    return render_template("main.html",name=name)
-
-
-
-
-@app.route("/hello/<string:name>")
+@app.route("/<string:name>")
 def daycare_table(name):
     con = sql.connect("database.db")
     con.row_factory = sql.Row
