@@ -2,8 +2,8 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="filterable">
-            <div class="panel-heading">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading" bgcolor="#FF0000">
 
                 <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
                     Filter
@@ -19,7 +19,7 @@
                 </tr>
                 <tr class="filters">
                     {% for column in column_names %}
-                    <th><input type="text" class="form-control" placeholder="" disabled></th>
+                        <td height="2px"><input type="text" class="form-control" placeholder="_" disabled></td>
                     {% endfor %}
                 </tr>
                 </thead>

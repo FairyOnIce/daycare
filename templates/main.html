@@ -5,13 +5,50 @@
     <div class="row">
             <div class="col">
                 <h1>Hello {{name}}!</h1>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1qDU4nc09mTkhAy3sUl5h4MbJNETHieP6" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1qDU4nc09mTkhAy3sUl5h4MbJNETHieP6" frameborder="0"  height="500" width="100%"></iframe>
             </div>
     </div>
     <div class="row">
-            <div class="col" margin="0px">
-                <iframe src="./daycare_table" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading" bgcolor="#FF0000">
+
+                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
+                    Filter
+                </button>
+
             </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    {% for column in column_names %}
+                    <th>{{column}}</th>
+                    {% endfor %}
+                </tr>
+                <tr class="filters">
+                    {% for column in column_names %}
+                        <td height="2px"><input type="text" class="form-control" placeholder="_" disabled></td>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in rows %}
+                <tr>
+                    {% for column in row.keys() %}
+                    <td>{{row[ column ]}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
     </div>
         <a href="https://fairyonice.github.io/"> Home </a>
 </div>

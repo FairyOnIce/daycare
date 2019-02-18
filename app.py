@@ -10,14 +10,15 @@ def index():
     return render_template("main.html", name="working mom")
 
 
-@app.route("/hello/<string:name>")
+@app.route("/daycare_table")
 def main(name):
     return render_template("main.html",name=name)
 
 
 
-@app.route("/daycare_table")
-def daycare_table():
+
+@app.route("/hello/<string:name>")
+def daycare_table(name):
     con = sql.connect("database.db")
     con.row_factory = sql.Row
 
@@ -26,7 +27,7 @@ def daycare_table():
 
     rows = cur.fetchall();
     column_names = rows[0].keys()
-    return render_template("list.html", rows=rows, column_names=column_names)
+    return render_template("main.html", name=name,rows=rows, column_names=column_names)
 
 
 
