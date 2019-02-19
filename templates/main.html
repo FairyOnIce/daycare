@@ -33,7 +33,12 @@
                 {% for row in rows %}
                 <tr>
                     {% for column in row.keys() %}
-                    <td>{{row[ column ]}}</td>
+
+                        {% if 'http' in row[ column ] %}
+                            <td><a href="{{row[ column ]}}">Link</a></td>
+                        {% else %}
+                            <td>{{row[ column ]}}</td>
+                        {% endif %}
                     {% endfor %}
                 </tr>
                 {% endfor %}

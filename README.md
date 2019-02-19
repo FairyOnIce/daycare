@@ -14,4 +14,5 @@ python app.py
 ## Step 3: Deploy to Heroku
 git add .
 git commit . -m ""
+git push
 git push heroku master
