@@ -22,6 +22,10 @@ def daycare_table(name):
     column_names = rows[0].keys()
     return render_template("main.html", name=name,rows=rows, column_names=column_names)
 
+@app.route("/leave")
+def leave():
+    return render_template("leave.html")
+
 
 
 if __name__ == "__main__":
